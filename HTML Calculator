@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>RNS Calculator</title>
+</head>
+<body>
+    <h2>RNS Tech Calculator v.1</h2>
+
+    <input id="a" placeholder="Number A">
+    <input id="b" placeholder="Number B">
+
+    <select id="op">
+        <option>+</option>
+        <option>-</option>
+        <option>*</option>
+        <option>/</option>
+    </select>
+
+    <button onclick="calc()">Run</button>
+
+    <h3 id="result"></h3>
+
+    <script>
+        function calc() {
+            let a = Number(document.getElementById("a").value);
+            let b = Number(document.getElementById("b").value);
+            let op = document.getElementById("op").value;
+
+            let r;
+
+            if (op == "+") r = a + b;
+            if (op == "-") r = a - b;
+            if (op == "*") r = a * b;
+            if (op == "/") r = b != 0 ? a / b : "Cannot divide by 0";
+
+            document.getElementById("result").innerText = "Result: " + r;
+        }
+    </script>
+</body>
+</html>
