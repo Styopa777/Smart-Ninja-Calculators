@@ -1,2 +1,2 @@
-# Smart-Ninja-Calculators
+ Smart-Ninja-Calculators
 Calculator with new operator P
